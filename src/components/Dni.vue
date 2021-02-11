@@ -1,6 +1,6 @@
 <template>
-    <label class="validacion">{{label}}</label>
-    <input v-model="texto" @keydown="comprobar"/>
+    <label :class="validacion">{{label}}</label>
+    <input  @keyup="comprobar"/>
 </template>
 
 <script>
@@ -11,33 +11,36 @@ export default {
         label: String
     },
     setup(){
-        let texto=ref("")  //variable reactiva
-        let reqExDni= /^\d{8}[a-zA-Z]$/
-        let color = ref();
-
+        let validacion=ref("label-bad")  //variable reactiva
         const comprobar=(e)=>{
-            console.log("e.target")
-            texto += e.key
-            if(reqExDni.texto(texto)){
-                color.value="background-color: green;"
-            }else{
-                color.value = "background-color: red;"
-            }  
+            console.log(e.target.value)
+            let texto=e.target.value
+            let reqExDni= /^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/i
+
+              // validacion.value="label-ok"
+            if(reqExDni.test(texto))
+              validacion.value="label-ok"
+            else 
+                validacion.value="label-bad"
+
         }
-
         return{
-            texto,
-            comprobar
-
+            comprobar,
+            validacion
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-    .validacion{
+    .label-bad{
         padding: 5px;
         color: #fff;
         background: red;
+    }
+    .label-ok{
+          padding: 5px;
+        color: #fff;
+        background: green;   
     }
 </style>

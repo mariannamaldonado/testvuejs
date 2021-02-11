@@ -4,7 +4,8 @@
     <router-link to="/about">About</router-link> |
     <router-link to="/test1">Test1</router-link> |
     <router-link to="/test2">Test2</router-link> |
-    <router-link to="/ejemplo1">Ejemplo1</router-link>
+    <router-link to="/test3">Test3</router-link> |
+    <router-link to="/Jobs">Jobs</router-link>
   </div>
   <router-view/>
 </template>
@@ -24,9 +25,13 @@
   a {
     font-weight: bold;
     color: #2c3e50;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: white;
+      background: #42b983;
     }
   }
 }

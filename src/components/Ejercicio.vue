@@ -1,6 +1,6 @@
 <template>
     <h1>COMPONENTE DE PRUEBA</h1>
-    <div>AMARILLO</div>
+    <div>Hello!!</div>
     <HelloWorld id="user" />
     <HelloWorld id="pass"/>
     <button @click="recogerDatos">Recoger Datos</button>
@@ -19,10 +19,11 @@ export default {
 
   setup(){
     function recogerDatos(){
-      console.log("estas aqui")
+      console.log(user)
     }
 
     return{
+      recogerDatos
     }
   }
 }

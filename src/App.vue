@@ -7,9 +7,20 @@
     <router-link to="/test3">Test3</router-link> |
     <router-link to="/Jobs">Jobs</router-link>
   </div>
+  <button @click="redirect">Redirect</button>
+  <button @click="back">Go back </button>
+  <button @click="forward">Go forward</button>
+
   <router-view/>
 </template>
 
+<script>
+export default {
+  redirect() {},
+  back() {},
+  forward() {}
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -34,5 +45,11 @@
       background: #42b983;
     }
   }
+}
+button{
+  margin: 0 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
 }
 </style>

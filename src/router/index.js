@@ -3,6 +3,8 @@ import Home from '../views/Home.vue'
 import Test1 from '../views/Test1.vue'
 import Test2 from '../views/Test2.vue'
 import Test3 from '../views/Test3.vue'
+import Test4 from '../views/Test4.vue'
+import Test5 from '../views/Test5.vue'
 import NotFound from '../views/NotFound.vue'
 import Jobs from '../views/jobs/Jobs.vue'
 import JobDetails from '../views/jobs/JobDetails.vue'
@@ -24,9 +26,19 @@ const routes = [
     component: Test2
   },
   {
-    path: '/Test3',
+    path: '/test3',
     name: 'Test3',
     component: Test3
+  },
+  {
+    path: '/test4',
+    name: 'Test4',
+    component: Test4
+  },
+  {
+    path: '/test5',
+    name: 'Test5',
+    component: Test5
   },
   {
     path: '/jobs',

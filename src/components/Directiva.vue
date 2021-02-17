@@ -23,8 +23,8 @@ export default {
 
      let jobs=[
      {title:"UX Designer",id:1,details:"lorem",imagen:'ux.jpg'},
-     {title:"Web Developer",id:2,details:"lorem",imagen:'numero2.jpg'},
-     {title:"Vue Developer",id:3,details:"lorem",imagen:'numero3.jpg'}
+     {title:"Web Developer",id:2,details:"lorem",imagen:'web.jpg'},
+     {title:"Vue Developer",id:3,details:"lorem",imagen:'vue.svg'}
     ]
 
     function verSeleccionado(){

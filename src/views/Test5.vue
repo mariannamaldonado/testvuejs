@@ -17,4 +17,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .row {
+        display:flex;
+        margin:50px;
+
+    }
 </style>

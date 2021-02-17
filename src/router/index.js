@@ -5,9 +5,13 @@ import Test2 from '../views/Test2.vue'
 import Test3 from '../views/Test3.vue'
 import Test4 from '../views/Test4.vue'
 import Test5 from '../views/Test5.vue'
+import Weather from '../views/Weather.vue'
 import NotFound from '../views/NotFound.vue'
 import Jobs from '../views/jobs/Jobs.vue'
 import JobDetails from '../views/jobs/JobDetails.vue'
+import Practicas from '../views/practica/Practicas.vue'
+import Practica from '../views/practica/Practica.vue'
+
 
 const routes = [
   {
@@ -41,6 +45,11 @@ const routes = [
     component: Test5
   },
   {
+    path: '/weather',
+    name: 'Weather',
+    component: Weather
+  },
+  {
     path: '/jobs',
     name: 'Jobs',
     component: Jobs
@@ -49,6 +58,17 @@ const routes = [
     path: '/jobs/:id',
     name: 'JobDetails',
     component: JobDetails,
+    props: true
+  },
+  {
+    path: '/practica',
+    name: 'Practica',
+    component: Practica
+  },
+  {
+    path: '/practica/:id',
+    name: 'Practicas',
+    component: Practicas,
     props: true
   },
   //redirect

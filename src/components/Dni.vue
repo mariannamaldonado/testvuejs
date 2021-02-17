@@ -1,6 +1,18 @@
 <template>
+
+    <div class="card">
+  <div class="card-header">
+   Ejercicio 2
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <p class="card-text">Crear un componente por una etiqyeta personalizable y una entrada de texto. la etiqueta permanecerá de color rojo mientras no se valide correctamente el DNI. 
+        <br> Para recoger la entrada de texto, podéis llamar a la funcion desde el vevento @keypress.
+        </p>
     <label :class="validacion">{{label}}</label>
     <input  @keyup="comprobar"/>
+  </div>
+</div>
 </template>
 
 <script>
@@ -42,5 +54,11 @@ export default {
           padding: 5px;
         color: #fff;
         background: green;   
+    }
+
+    .card {
+        display:flex;
+        margin:50px;
+
     }
 </style>

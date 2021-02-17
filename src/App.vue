@@ -7,6 +7,8 @@
     <router-link to="/test3">Test3</router-link> |
     <router-link to="/test4">Test4</router-link> |
     <router-link to="/test5">Test5</router-link> |
+    <router-link to="/weather">Weather</router-link> |
+    <router-link to="/practica">Practica</router-link> |
     <router-link to="/Jobs">Jobs</router-link>
   </div>
   <button @click="redirect">Redirect</button>
@@ -18,9 +20,17 @@
 
 <script>
 export default {
-  redirect() {},
-  back() {},
-  forward() {}
+  methods: {
+     redirect() {
+       this.$router.push({name:'Home'})
+     },
+  back() {
+    this.$router.go(-1)
+  },
+  forward() {
+    this.$router.go(1)
+  }
+  }
 }
 </script>
 <style lang="scss">

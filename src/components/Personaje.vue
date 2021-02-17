@@ -1,7 +1,5 @@
 <template>
   <div class="test">
-    <h1>Página de prueba</h1>
-    <h2>Reactividad</h2>
        <img alt="jack" src="../assets/jackjack.png">
         <div>Nick: {{ nickname }}</div>
           <div>Powers: {{ powers }}</div>

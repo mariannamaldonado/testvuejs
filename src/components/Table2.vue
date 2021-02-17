@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-      <hr>
+<hr>
   
    <div class="row">
        <div class="border col-12">
@@ -8,19 +8,18 @@
            <div class="col-xs-3"><input class="form-control" v-model="cantidad" type="number" placeholder="Cantidad" /></div>
            <div class="col-xs-3"><input class="form-control" v-model="precio" type="number" placeholder="Precio" /></div>
             <div><button @click="agregar" type="button" class="btn btn-outline-dark">Agregar</button></div>
-           
-   </div>
-  </div>
+        </div>
+    </div>
   <hr>
   
  <table class="table table-dark table-hover">
-         <thead>
-            <tr>
-                <th>Descripcion</th>
-                <th>precio</th>
-                <th>cantidad</th>
-                <th>subtotal</th>
-                <th></th>                  
+    <thead>
+        <tr>
+            <th>Descripcion</th>
+            <th>precio</th>
+            <th>cantidad</th>
+            <th>subtotal</th>
+            <th>Eliminar</th>                  
             </tr>
         </thead>
       <tbody>
@@ -29,7 +28,7 @@
                 <td>{{ valor.precio }}</td>
                 <td>{{ valor.cantidad }}</td>
                 <td>{{ subTotal(valor.precio,valor.cantidad)}}</td>
-                <td class="table-dark">{{total}}</td>
+                <td><button class="btn btn-danger" @click="eliminar(i)">Eliminar</button></td>
             </tr>
         </tbody>    
     </table>
@@ -40,39 +39,54 @@
 </template>
 
 <script>
-import {ref, reactive, onMounted } from 'vue'
+import {ref, reactive, onMounted, watch } from 'vue'
 
 export default {
-    name:'Table',
+    name:'Table2',
     props:{},
     setup(){
         let descripcion = ref("")
-        let cantidad = ref(0)
-        let precio = ref(0.00)
+        let cantidad = ref("0")
+        let precio = ref("0.00")
      let datos=reactive([
         {descripcion:'Pantalones vaqueros chico',cantidad:2,precio:30.99},
         {descripcion:'Camiseta básica chico',cantidad:4,precio:6.99},
         {descripcion:'Pijama unisex',cantidad:1,precio:12.50},
         {descripcion:'Deportivas Nike',cantidad:1,precio:80.00}
      ])
-    let total=ref("")
-    const subTotal= (cantidad,precio)=>cantidad*precio
-    const cTotal= ()=>{
-        datos.forEach(valor=>
-        total.value+valor.cantidad*valor.precio)
-    }
-    onMounted(()=>cTotal())
-     return{
-         datos,
-         subTotal,
-         total,
-         cantidad,
-         precio,
-         descripcion
-         
-     }
+    
+    const total= computed(()=>{
+        let total=0
+        datos.forEach(valor=>{
+            total+=valor.cantidad*valor.precio
+        })
+        return total
+    })
+
+    const agregar=()=>{
+     let nuevo={
+        descripcion: descripcion.value,
+        cantidad: cantidad.value,
+        precio: precio.value
+            }
+            datos.push(nuevo)
+        }
+        //función para eliminar un concepto de la lista:
+        const eliminar=(id)=>{
+            if(confirm("¿Seguro que desea eliminar?"))
+                datos.splice(id,1)
+        }
+        return {
+            datos,
+            agregar, eliminar,
+            total,
+            descripcion,
+            cantidad,
+            precio
+        }
+    }    
 }
-}
+    
 </script>
 
 <style lang="scss" scoped>

@@ -1,7 +1,6 @@
 <template>
 <div class="container">
       <hr>
-  
  <table class="table table-dark table-hover">
          <thead>
             <tr>
@@ -24,6 +23,7 @@
     </table>
 
     <div>Total:{{total}} </div> 
+      <hr>
 </div>
 
 </template>

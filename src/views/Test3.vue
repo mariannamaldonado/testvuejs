@@ -1,19 +1,17 @@
 <template>
-<div>
-   <login />
-</div>
-
-
+  <div class="test">
+   <Directiva />
+  </div>
 </template>
 
 <script>
 
-import Login from '@/components/Login.vue'
+import Directiva from '@/components/Directiva.vue'
 
 export default {
-  name: 'loginUsers',
+  name: 'Test3',
   components: {
-    Login
+    Directiva
   }
 }
 </script>

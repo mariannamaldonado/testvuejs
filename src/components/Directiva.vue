@@ -3,7 +3,7 @@
     <!-- v-model enlaza un elemento de html con una raviable de js -->
   <select v-model="eSeleccionado" @change="verSeleccionado">
       <!-- //atributo value es de la etiqueta option -->
-    <option v-for="(job,indice) in jobs" :key="indice" value="persona.imagen">{{job.title}} - {{job.id}}</option> 
+    <option v-for="(job,indice) in jobs" :key="indice" :value="persona.imagen">{{job.title}} - {{job.id}}</option> 
   </select>
   <!-- <button @click="cambiarSelect">Cambiar</button> -->
   <img class="imagen" :src="eSeleccionado">
@@ -47,14 +47,14 @@ export default {
 
 <style>
 .item {
-    font-family: sans-serif;
+    /* font-family: sans-serif;
   border: 1px solid rgb(56, 45, 53);
   border-radius: 2px;
   padding: 20px 30px;
   margin-top: 1em;
   margin-bottom: 40px;
   user-select: none;
-  overflow-x: auto;
+  overflow-x: auto; */
 }
 
 .imagen{

@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "i18next": "^19.9.0",
+    "i18next-fs-backend": "^1.1.0",
     "json-serve": "^0.1.0",
+    "nodemon": "^2.0.7",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"

@@ -7,6 +7,10 @@
     <router-link to="/test3">Test3</router-link> |
     <router-link to="/test4">Test4</router-link> |
     <router-link to="/test5">Test5</router-link> |
+    <router-link to="/test6">Test6</router-link> |
+    <router-link to="/test7">Test7</router-link> |
+    <router-link to="/test8">Test8</router-link> |
+    <router-link to="/pruebas">Pruebas</router-link> |
     <router-link to="/weather">Weather</router-link> |
     <router-link to="/practica">Practica</router-link> |
     <router-link to="/Jobs">Jobs</router-link>

@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <Table2/>
+        <!-- <Table2/> -->
     </div> 
 
 </template>

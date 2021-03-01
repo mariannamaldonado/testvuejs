@@ -1,6 +1,15 @@
+
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
 
-createApp(App).use(store).use(router).mount('#app')
+import i18next from '@/locales/i18next'
+
+// import 'leaflet/dist/leaflet.css';
+
+
+
+createApp(App).use(i18next).use(store).use(router).mount('#app')
+
+

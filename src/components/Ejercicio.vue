@@ -19,7 +19,7 @@ export default {
 
   setup(){
     function recogerDatos(){
-      console.log(user)
+      console.log(user.value)
     }
 
     return{

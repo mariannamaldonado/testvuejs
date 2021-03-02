@@ -1,18 +1,18 @@
 <template>
   <div class="home">
-    <HelloWorld />
-    <HelloWorld />
+    <Ejercicio />
+  
   </div>
 </template>
 
 <script>
 
-import HelloWorld from '@/components/HelloWorld.vue'
+import Ejercicio from '@/components/Ejercicio.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    Ejercicio
   }
 }
 </script>

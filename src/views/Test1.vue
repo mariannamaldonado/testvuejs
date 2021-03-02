@@ -1,4 +1,14 @@
 <template>
+ <div class="card">
+  <div class="card-header">
+   Ejercicio 1
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Página de prueba</h5>
+    <p class="card-text">Reactividad
+        </p>
+  </div>
+</div>
   <div class="test">
    <Personaje/>
   </div>
@@ -15,3 +25,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+ .card {
+        display:flex;
+        margin:50px;
+
+    }
+</style>
